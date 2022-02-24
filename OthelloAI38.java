@@ -9,30 +9,6 @@ public class OthelloAI38 implements IOthelloAI {
         return aiMove;
     }
 
-//    private int minimax(GameState s, int depth, boolean maximizingPlayer) {
-//        if (depth == 0 || s.isFinished()) {
-//            return maximizingPlayer ? s.countTokens()[1] - s.countTokens()[0] : s.countTokens()[0] - s.countTokens()[1];
-//        }
-//
-//        GameState newState = new GameState(s.getBoard(), s.getPlayerInTurn());
-//
-//        if (maximizingPlayer) {
-//            int maxEval = Integer.MIN_VALUE;
-//            for (Position p : s.legalMoves()) {
-//                newState.insertToken(p);
-//                maxEval = minimax(newState, depth - 1, false);
-//            }
-//            return maxEval;
-//        } else {
-//            int minEval = Integer.MAX_VALUE;
-//            for (Position p : s.legalMoves()) {
-//                newState.insertToken(p);
-//                minEval = minimax(newState, depth - 1, true);
-//            }
-//            return minEval;
-//        }
-//    }
-
     private int minimaxAlphaBeta(GameState s, int depth, int alpha, int beta, boolean maximizingPlayer) {
         if (depth == 0 || s.isFinished()) {
             return maximizingPlayer ? s.countTokens()[1] - s.countTokens()[0] : s.countTokens()[0] - s.countTokens()[1];
