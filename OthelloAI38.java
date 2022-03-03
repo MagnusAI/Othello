@@ -19,7 +19,7 @@ public class OthelloAI38 implements IOthelloAI {
     }
 
     private Position minimaxSearch(GameState state) {
-        int depth = 8;
+        int depth = 6;
         Move move = state.getPlayerInTurn() == 2 ?
                 maxValue(state, new Position(-1, -1), Integer.MIN_VALUE, Integer.MAX_VALUE, depth) :
                 minValue(state, new Position(-1, -1), Integer.MIN_VALUE, Integer.MAX_VALUE, depth);
